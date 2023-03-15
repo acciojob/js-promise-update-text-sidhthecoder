@@ -1,16 +1,15 @@
 //your JS code here. If required.
-let output=document.getElementById("output");
-
-function promise(){
-	return new promise((resolve,reject)=>{
+function Hello(){
+	return new Promise((resolve,reject)=>{
 		setTimeout(()=>{
-			resolve("Hello,world");
-		});
+			resolve("Hello,world!");
+		},1000);
 	});
 }
+Hello().then(data=>{
+   document.getElementById('output').innerHTML=data;
+});
 
-
-output.innerHTML=promise().then((data)=>console.log("data",data));;
 /*
 function giveFood() {
   return new Promise((resolve, reject) => {
